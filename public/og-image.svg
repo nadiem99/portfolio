@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f3f0ea"/>
+  <path d="M90 118h1020v1H90zM90 512h1020v1H90z" fill="#171717" opacity=".15"/>
+  <text x="90" y="255" fill="#171717" font-family="Georgia, serif" font-size="82">Nadiem Ahmed</text>
+  <text x="94" y="330" fill="#5d5a54" font-family="Courier New, monospace" font-size="30">AI-native operator at the intersection of business and technology.</text>
+  <text x="94" y="425" fill="#8f4f22" font-family="Courier New, monospace" font-size="24">Product · Strategy &amp; Ops · GTM · AI adoption</text>
+</svg>
