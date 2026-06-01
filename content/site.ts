@@ -7,8 +7,8 @@ export const site = {
   location: "Toronto, Canada",
   email: "mailto:nadiemahmed@gmail.com",
   linkedin: "https://www.linkedin.com/in/nadiemahmed/",
-  github: "https://github.com/nadiemahmed",
-  source: "https://github.com/nadiemahmed/portfolio",
+  github: "https://github.com/nadiem99",
+  source: "https://github.com/nadiem99/portfolio",
   writing: "https://substack.com/@nadiem99",
 };
 
