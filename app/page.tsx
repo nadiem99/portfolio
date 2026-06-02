@@ -1,6 +1,7 @@
 import Section from "@/components/Section";
 import TimelineCard from "@/components/TimelineCard";
-import { education, experiences } from "@/content/site";
+import ShowcaseCard from "@/components/ShowcaseCard";
+import { education, experiences, sideProjects, skills } from "@/content/site";
 
 export default function Home() {
   return (
@@ -50,17 +51,29 @@ export default function Home() {
         ))}
       </div>
 
-      <div id="projects" className="border-t border-foreground/10 pt-8">
-        <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
-          <div>
-            <h2 className="mb-2 font-serif text-xl md:text-3xl">Proof in progress</h2>
-            <p className="font-mono text-[12px] text-muted md:text-[13px]">
-              Coming soon.
-            </p>
+      <div id="projects" className="border-t border-foreground/10 pt-10 md:pt-12">
+        <h2 className="mb-8 font-serif text-2xl md:text-3xl">Proof of Work</h2>
+
+        <div className="mb-12 md:mb-16">
+          <h3 className="mb-5 font-mono text-[12px] uppercase tracking-widest text-muted">
+            Side Projects
+          </h3>
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-6 lg:grid-cols-3">
+            {sideProjects.map((project) => (
+              <ShowcaseCard key={project.title} {...project} />
+            ))}
           </div>
-          <span className="w-fit border border-accent/20 bg-accent/5 px-3 py-1 font-mono text-[10px] uppercase tracking-widest text-accent">
-            Coming soon
-          </span>
+        </div>
+
+        <div>
+          <h3 className="mb-5 font-mono text-[12px] uppercase tracking-widest text-muted">
+            AI Workflows &amp; Skills
+          </h3>
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-6">
+            {skills.map((skill) => (
+              <ShowcaseCard key={skill.title} {...skill} />
+            ))}
+          </div>
         </div>
       </div>
     </Section>

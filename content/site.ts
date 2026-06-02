@@ -95,39 +95,76 @@ export const education: Experience[] = [
   },
 ];
 
-export type Project = {
+export type ShowcaseLink = { label: string; href: string };
+
+export type ShowcaseMedia =
+  | { kind: "loom"; embedId: string; poster: string }
+  | { kind: "video"; src: string; poster: string }
+  | { kind: "image"; src: string; href: string };
+
+export type Showcase = {
   title: string;
-  description: string;
+  blurb: string;
   tags: string[];
-  techStack: string[];
-  href?: string;
-  githubUrl?: string;
-  highlighted?: boolean;
+  media?: ShowcaseMedia;
+  links: ShowcaseLink[];
 };
 
-export const projects: Project[] = [
+export const sideProjects: Showcase[] = [
   {
-    title: "AI operator toolkit",
-    description:
-      "A growing set of AI-assisted workflows for research synthesis, memo drafting, market mapping, and decision support. Notes and artifacts coming soon.",
-    tags: ["AI", "Strategy", "Operations"],
-    techStack: ["Claude", "ChatGPT", "Perplexity", "Notion"],
-    highlighted: true,
+    title: "FPL Edge",
+    blurb:
+      "A decision-support tool for Fantasy Premier League. It turns squad and fixture data into a weekly command center — transfer plans, expected-value estimates, and risk-rated recommendations. (Demo: the live tool is paused now that the season is over.)",
+    tags: ["Decision tool", "Sports analytics"],
+    media: {
+      kind: "loom",
+      embedId: "698b677f2f7f431d9143acae587b135e",
+      poster: "/projects/fpl-edge-poster.jpg",
+    },
+    links: [
+      {
+        label: "Watch demo",
+        href: "https://www.loom.com/share/698b677f2f7f431d9143acae587b135e",
+      },
+    ],
   },
   {
-    title: "Fantasy Premier League edge",
-    description:
-      "Competitive decision system for a global game with millions of players. Currently Top 1%, using pattern recognition, constraints, and calculated risk.",
-    tags: ["Decision systems", "Sports analytics"],
-    techStack: ["FPL", "Data", "Portfolio thinking"],
-    href: "https://fantasy.premierleague.com/entry/1247497/history",
+    title: "Career EV Analyzer",
+    blurb:
+      "An interactive dashboard that estimates the expected value of different generalist career paths — weighting comp by the odds you stay, adding fallback value, and discounting to today's dollars. Every assumption is editable.",
+    tags: ["Dashboard", "Decision systems"],
+    media: {
+      kind: "image",
+      src: "/projects/career-ev-analyzer.png",
+      href: "https://nadiem99.github.io/career-ev-analyzer",
+    },
+    links: [
+      { label: "Open dashboard", href: "https://nadiem99.github.io/career-ev-analyzer" },
+    ],
   },
   {
-    title: "Personal gallery archive",
-    description:
-      "Earlier portfolio experiment built as a virtual gallery with rooms for work, ventures, reading, writing, photography, and leisure.",
-    tags: ["Portfolio", "Storytelling"],
-    techStack: ["React", "TypeScript", "Tailwind", "Supabase"],
+    title: "Music Twin",
+    blurb:
+      "A simple tool that reads your Spotify listening history and surfaces the people whose music taste is most compatible with yours — matched across artists, genres, and audio features. (Demo: gated by Spotify API limits.)",
+    tags: ["Spotify API", "Music"],
+    media: {
+      kind: "video",
+      src: "/projects/music-twin-demo.mp4",
+      poster: "/projects/music-twin-poster.jpg",
+    },
+    links: [],
+  },
+];
+
+export const skills: Showcase[] = [
+  {
+    title: "Claude Writing Skills",
+    blurb:
+      "A library of Claude Code skills that run an entire editorial pipeline — interview, research, outline, draft, coach, edit, source-check, top-edit, and repurpose — built to write my Substack in my own voice without auto-generating it.",
+    tags: ["Claude Code", "Skills", "Writing"],
+    links: [
+      { label: "View on GitHub", href: "https://github.com/nadiem99/claude-writing-skills" },
+    ],
   },
 ];
 

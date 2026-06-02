@@ -36,6 +36,9 @@ yarn-error.log*
 # local tooling
 .claude
 
+# raw input assets (processed versions live in public/)
+attachments
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
