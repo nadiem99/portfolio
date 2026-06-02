@@ -1,6 +1,6 @@
 # Nadiem Ahmed Portfolio
 
-A clean personal portfolio for Nadiem Ahmed, adapted from Jaidev Jayakumar's `jdsnotes` source with permission.
+A clean personal portfolio for Nadiem Ahmed, adapted from Jaidev Jayakumar's `jdsnotes` source.
 
 ## Stack
 
