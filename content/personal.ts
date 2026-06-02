@@ -66,12 +66,25 @@ export const countriesWishlist: string[] = [
 
 export type GalleryPhoto = { src: string; alt: string };
 
-// TODO: replace placeholders with real Shot by Nad photos
-// (drop files in public/personal/gallery/ and update this list).
-export const gallery: GalleryPhoto[] = Array.from({ length: 6 }, (_, i) => ({
-  src: `/personal/gallery/placeholder-${String(i + 1).padStart(2, "0")}.jpg`,
-  alt: `Shot by Nad — placeholder ${i + 1}`,
-}));
+export const gallery: GalleryPhoto[] = [
+  { src: "/personal/gallery/000017630008.jpeg", alt: "Shot by Nad — photograph 1" },
+  { src: "/personal/gallery/001269730024.jpeg", alt: "Shot by Nad — photograph 2" },
+  { src: "/personal/gallery/001468200015.jpeg", alt: "Shot by Nad — photograph 3" },
+  { src: "/personal/gallery/001468200036.jpeg", alt: "Shot by Nad — photograph 4" },
+  { src: "/personal/gallery/001683560006.jpeg", alt: "Shot by Nad — photograph 5" },
+  { src: "/personal/gallery/001683580006.jpeg", alt: "Shot by Nad — photograph 6" },
+  { src: "/personal/gallery/001683580011.jpeg", alt: "Shot by Nad — photograph 7" },
+  { src: "/personal/gallery/001683580014.jpeg", alt: "Shot by Nad — photograph 8" },
+  { src: "/personal/gallery/IMG_0672.jpeg", alt: "Shot by Nad — photograph 9" },
+  { src: "/personal/gallery/IMG_1227.jpeg", alt: "Shot by Nad — photograph 10" },
+  { src: "/personal/gallery/IMG_1798.jpeg", alt: "Shot by Nad — photograph 11" },
+  { src: "/personal/gallery/IMG_2120.jpeg", alt: "Shot by Nad — photograph 12" },
+  { src: "/personal/gallery/IMG_3327.jpeg", alt: "Shot by Nad — photograph 13" },
+  { src: "/personal/gallery/R1-01400-0031.jpeg", alt: "Shot by Nad — photograph 14" },
+  { src: "/personal/gallery/R1-06097-001A.jpeg", alt: "Shot by Nad — photograph 15" },
+  { src: "/personal/gallery/R1-06097-025A.jpeg", alt: "Shot by Nad — photograph 16" },
+  { src: "/personal/gallery/R1-08184-0011.jpeg", alt: "Shot by Nad — photograph 17" },
+];
 
 export type Team = { name: string; logo: string; note: string };
 

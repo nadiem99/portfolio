@@ -43,14 +43,14 @@ export default function PhotoCarousel() {
             href={personal.instagram}
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative aspect-[4/5] w-[70%] flex-none snap-center overflow-hidden border border-foreground/10 bg-foreground/5 sm:w-[44%] md:w-[31%] lg:w-[23%]"
+            className="group relative aspect-[3/2] w-[82%] flex-none snap-center overflow-hidden border border-foreground/10 bg-foreground/5 sm:w-[56%] md:w-[42%] lg:w-[33%]"
             aria-label={`${photo.alt} — open Instagram`}
           >
             <Image
               src={photo.src}
               alt={photo.alt}
               fill
-              sizes="(max-width: 640px) 70vw, (max-width: 1024px) 31vw, 23vw"
+              sizes="(max-width: 640px) 82vw, (max-width: 1024px) 42vw, 33vw"
               className="object-cover transition-transform duration-500 group-hover:scale-[1.04]"
               priority={i === 0}
             />
