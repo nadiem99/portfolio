@@ -26,59 +26,72 @@ export type Experience = {
 
 export const experiences: Experience[] = [
   {
-    title: "Consultant, Digital & AI Transformation",
+    title: "Senior Consultant, Digital & AI Transformation",
     company: "Oliver Wyman",
     description:
-      "Helped clients evaluate and develop digital and AI transformation strategies; scaled an enterprise genAI platform to 7K+ consultants globally.",
-    date: "2022 - 2025",
-    location: "Toronto / New York",
+      "Led development and rollout of an internal enterprise genAI platform that scaled to 7K+ employees. Ran a PMO across 80+ technology projects and supported M&A, market, and data-driven strategy work.",
+    date: "2023 - 2025",
+    location: "Montreal, Canada",
     highlighted: true,
     logoText: "OW",
-    logo: "https://logo.clearbit.com/oliverwyman.com",
+    logo: "/logos/oliver-wyman.svg",
     tags: ["AI strategy", "Digital transformation", "Consulting"],
   },
   {
-    title: "External Affairs Chair",
-    company: "Cornell Tech",
+    title: "Strategy Analyst",
+    company: "Accenture Strategy",
     description:
-      "Organized an agentic AI hackathon with 150+ participants and helped bring together student builders, operators, partners, and sponsors.",
-    date: "2025 - 2026",
-    location: "New York, NY",
-    logoText: "CT",
-    logo: "https://logo.clearbit.com/tech.cornell.edu",
-    tags: ["AI", "Partnerships", "Events"],
+      "Built a consolidated global relocation policy for a rail solutions provider, standardizing the process worldwide and unlocking $3M in potential savings.",
+    date: "Summer 2021",
+    location: "Toronto, Canada",
+    logoText: "AC",
+    logo: "/logos/accenture.png",
+    tags: ["Strategy", "Operations"],
   },
   {
-    title: "Writer",
-    company: "Long-term positioning in a changing world",
+    title: "Business Analyst",
+    company: "Capital One",
     description:
-      "Writes about how people, companies, and countries can position themselves for durable advantage as technology, markets, and institutions shift.",
-    date: "Ongoing",
-    logoText: "WR",
-    tags: ["Writing", "Strategy", "Systems"],
+      "Built a dashboard automating credit-bureau insights for the SVP, saving roughly 50 hours of manual work each month.",
+    date: "Summer 2020",
+    location: "Toronto, Canada",
+    logoText: "C1",
+    logo: "/logos/capital-one.png",
+    tags: ["Analytics", "Dashboards"],
+  },
+  {
+    title: "Programs Analyst",
+    company: "Bombardier",
+    description:
+      "Streamlined the supplier invoice-approval process and reduced delays by 20%.",
+    date: "Summer 2019",
+    location: "Montreal, Canada",
+    logoText: "BB",
+    logo: "/logos/bombardier.png",
+    tags: ["Process", "Operations"],
   },
 ];
 
 export const education: Experience[] = [
   {
-    title: "MBA Candidate",
-    company: "Cornell Tech / Cornell Johnson",
+    title: "Master of Business Administration (MBA)",
+    company: "Johnson Cornell Tech (Cornell University)",
     description:
-      "Cornell Tech MBA '26. Cañizares Center for Emerging Markets fellow; focused on AI, technology, strategy, and emerging markets.",
+      "STEM-designated MBA. External Affairs Chair and Emerging Markets Institute Fellow; focused on AI, technology, strategy, and emerging markets.",
     date: "2025 - 2026",
     location: "New York, NY",
     logoText: "CU",
-    logo: "https://logo.clearbit.com/cornell.edu",
+    logo: "/logos/cornell.svg",
   },
   {
-    title: "Commerce / Management",
-    company: "University of Toronto - Rotman School of Management",
+    title: "Bachelor of Engineering (B.Eng)",
+    company: "McGill University",
     description:
-      "Bregman Scholar and Andrew Alexander Kinghorn Scholarship recipient; active across consulting, finance, engineering, and sports business student groups.",
-    date: "2020 - 2022",
-    location: "Toronto, Canada",
-    logoText: "UT",
-    logo: "https://logo.clearbit.com/utoronto.ca",
+      "Recipient of the SURE research scholarship, awarded to fewer than 100 engineering students for a funded summer research project.",
+    date: "2018 - 2022",
+    location: "Montreal, Canada",
+    logoText: "MG",
+    logo: "/logos/mcgill.svg",
   },
 ];
 
@@ -253,6 +266,37 @@ export const notes: Note[] = [
   },
 ];
 
+export type Essay = {
+  title: string;
+  author: string;
+  description: string;
+  href: string;
+};
+
+export const essays: Essay[] = [
+  {
+    title: "How to Do Great Work",
+    author: "Paul Graham",
+    description:
+      "A field guide to choosing the right problems, following curiosity, and compounding effort into work that matters.",
+    href: "https://www.paulgraham.com/greatwork.html?viewfullsite=1",
+  },
+  {
+    title: "On Bullshit",
+    author: "Harry Frankfurt",
+    description:
+      "A short philosophical classic on the difference between lying and bullshit, and why indifference to truth is its own danger.",
+    href: "https://www.math.mcgill.ca/rags/JAC/124/bs.html",
+  },
+  {
+    title: "Machines of Loving Grace",
+    author: "Dario Amodei",
+    description:
+      "Anthropic's CEO on how powerful AI could radically improve health, the economy, and human freedom if we get it right.",
+    href: "https://darioamodei.com/essay/machines-of-loving-grace#basic-assumptions-and-framework",
+  },
+];
+
 export type Read = {
   title: string;
   author: string;
@@ -267,21 +311,18 @@ export type ReadShelf = {
   books: Read[];
 };
 
-const cover = (title: string) =>
-  `https://covers.openlibrary.org/b/title/${encodeURIComponent(title)}-L.jpg`;
-
 export const readingShelves: ReadShelf[] = [
   {
     title: "Currently Reading",
     books: [
       {
-        title: "How Asia Works",
+        title: "How Africa Works",
         author: "Joe Studwell",
         color: "#8B4513",
         description:
-          "How Japan, South Korea, Taiwan, and China achieved rapid economic growth through strategic industrial policies.",
-        amazonUrl: "https://www.amazon.com/s?k=How+Asia+Works+Joe+Studwell",
-        coverUrl: cover("How Asia Works"),
+          "Studwell's follow-up to How Asia Works: success and failure on the world's last developmental frontier, and what it takes for African economies to grow.",
+        amazonUrl: "https://www.amazon.com/s?k=How+Africa+Works+Joe+Studwell",
+        coverUrl: "/covers/how-africa-works.jpg",
       },
       {
         title: "The Secret of Secrets",
@@ -290,7 +331,7 @@ export const readingShelves: ReadShelf[] = [
         description:
           "A mystery that weaves together ancient secrets and modern-day intrigue in Dan Brown's signature style.",
         amazonUrl: "https://www.amazon.com/s?k=The+Secret+of+Secrets+Dan+Brown",
-        coverUrl: cover("The Secret of Secrets Dan Brown"),
+        coverUrl: "/covers/the-secret-of-secrets.jpg",
       },
       {
         title: "Destiny Disrupted",
@@ -299,7 +340,7 @@ export const readingShelves: ReadShelf[] = [
         description:
           "World history told from an Islamic perspective, offering an alternative narrative of human civilization.",
         amazonUrl: "https://www.amazon.com/s?k=Destiny+Disrupted+Tamim+Ansary",
-        coverUrl: cover("Destiny Disrupted"),
+        coverUrl: "/covers/destiny-disrupted.jpg",
       },
     ],
   },
@@ -313,7 +354,7 @@ export const readingShelves: ReadShelf[] = [
         description:
           "A fable about following your dreams and listening to your heart.",
         amazonUrl: "https://www.amazon.com/s?k=The+Alchemist+Paulo+Coelho",
-        coverUrl: cover("The Alchemist Paulo Coelho"),
+        coverUrl: "/covers/the-alchemist.jpg",
       },
       {
         title: "Dune",
@@ -322,7 +363,7 @@ export const readingShelves: ReadShelf[] = [
         description:
           "An epic tale of politics, religion, ecology, and power on a desert planet.",
         amazonUrl: "https://www.amazon.com/s?k=Dune+Frank+Herbert",
-        coverUrl: cover("Dune Frank Herbert"),
+        coverUrl: "/covers/dune.jpg",
       },
       {
         title: "Robert Langdon Series",
@@ -331,7 +372,7 @@ export const readingShelves: ReadShelf[] = [
         description:
           "Thrilling adventures featuring symbologist Robert Langdon.",
         amazonUrl: "https://www.amazon.com/s?k=Robert+Langdon+Series+Dan+Brown",
-        coverUrl: cover("The Da Vinci Code Dan Brown"),
+        coverUrl: "/covers/robert-langdon-series.jpg",
       },
       {
         title: "Range",
@@ -340,7 +381,7 @@ export const readingShelves: ReadShelf[] = [
         description:
           "Why generalists triumph in a specialized world.",
         amazonUrl: "https://www.amazon.com/s?k=Range+David+Epstein",
-        coverUrl: cover("Range David Epstein"),
+        coverUrl: "/covers/range.jpg",
       },
       {
         title: "The Courage to be Disliked",
@@ -349,7 +390,7 @@ export const readingShelves: ReadShelf[] = [
         description:
           "A dialogue on Adlerian psychology and living freely.",
         amazonUrl: "https://www.amazon.com/s?k=The+Courage+to+be+Disliked",
-        coverUrl: cover("The Courage to be Disliked"),
+        coverUrl: "/covers/the-courage-to-be-disliked.jpg",
       },
       {
         title: "Principles",
@@ -358,7 +399,7 @@ export const readingShelves: ReadShelf[] = [
         description:
           "A blueprint for decision-making and personal growth.",
         amazonUrl: "https://www.amazon.com/s?k=Principles+Ray+Dalio",
-        coverUrl: cover("Principles Ray Dalio"),
+        coverUrl: "/covers/principles.jpg",
       },
       {
         title: "Decoded",
@@ -367,7 +408,7 @@ export const readingShelves: ReadShelf[] = [
         description:
           "A memoir exploring lyrics, life, hip-hop, creativity, and success.",
         amazonUrl: "https://www.amazon.com/s?k=Decoded+Jay-Z",
-        coverUrl: cover("Decoded Jay-Z"),
+        coverUrl: "/covers/decoded.jpg",
       },
       {
         title: "Shoe Dog",
@@ -376,7 +417,7 @@ export const readingShelves: ReadShelf[] = [
         description:
           "The memoir of Nike's founder, full of risk, obsession, and company building.",
         amazonUrl: "https://www.amazon.com/s?k=Shoe+Dog+Phil+Knight",
-        coverUrl: cover("Shoe Dog Phil Knight"),
+        coverUrl: "/covers/shoe-dog.jpg",
       },
       {
         title: "The Black Swan",
@@ -385,7 +426,7 @@ export const readingShelves: ReadShelf[] = [
         description:
           "On uncertainty, randomness, and the impact of highly improbable events.",
         amazonUrl: "https://www.amazon.com/s?k=The+Black+Swan+Nassim+Taleb",
-        coverUrl: cover("The Black Swan Nassim Taleb"),
+        coverUrl: "/covers/the-black-swan.jpg",
       },
     ],
   },
@@ -399,7 +440,7 @@ export const readingShelves: ReadShelf[] = [
         description:
           "An account of the atomic bombing and its aftermath through survivor stories.",
         amazonUrl: "https://www.amazon.com/s?k=Ghosts+of+Hiroshima",
-        coverUrl: cover("Ghosts of Hiroshima Charles Pellegrino"),
+        coverUrl: "/covers/ghosts-of-hiroshima.jpg",
       },
       {
         title: "The Creative Act",
@@ -408,7 +449,7 @@ export const readingShelves: ReadShelf[] = [
         description:
           "A meditation on creativity and the artist's way of being.",
         amazonUrl: "https://www.amazon.com/s?k=The+Creative+Act+Rick+Rubin",
-        coverUrl: cover("The Creative Act Rick Rubin"),
+        coverUrl: "/covers/the-creative-act.jpg",
       },
       {
         title: "Chip War",
@@ -417,7 +458,7 @@ export const readingShelves: ReadShelf[] = [
         description:
           "How semiconductors shape global power and competition.",
         amazonUrl: "https://www.amazon.com/s?k=Chip+War+Chris+Miller",
-        coverUrl: cover("Chip War Chris Miller"),
+        coverUrl: "/covers/chip-war.jpg",
       },
       {
         title: "The Quiet Coup",
@@ -426,7 +467,7 @@ export const readingShelves: ReadShelf[] = [
         description:
           "How corporate power has reshaped American democracy.",
         amazonUrl: "https://www.amazon.com/s?k=The+Quiet+Coup+Mehrsa+Baradaran",
-        coverUrl: cover("The Quiet Coup Mehrsa Baradaran"),
+        coverUrl: "/covers/the-quiet-coup.jpg",
       },
       {
         title: "Thinking in Systems",
@@ -435,7 +476,7 @@ export const readingShelves: ReadShelf[] = [
         description:
           "A primer on systems thinking and complex behavior.",
         amazonUrl: "https://www.amazon.com/s?k=Thinking+in+Systems+Donella+Meadows",
-        coverUrl: cover("Thinking in Systems Donella Meadows"),
+        coverUrl: "/covers/thinking-in-systems.jpg",
       },
       {
         title: "Made in America",
@@ -444,7 +485,7 @@ export const readingShelves: ReadShelf[] = [
         description:
           "The story of Walmart's founder and the building of a retail giant.",
         amazonUrl: "https://www.amazon.com/s?k=Sam+Walton+Made+in+America",
-        coverUrl: cover("Sam Walton Made in America"),
+        coverUrl: "/covers/made-in-america.jpg",
       },
       {
         title: "The Hitchhiker's Guide",
@@ -453,7 +494,7 @@ export const readingShelves: ReadShelf[] = [
         description:
           "The sci-fi comedy classic about life, the universe, and everything.",
         amazonUrl: "https://www.amazon.com/s?k=Hitchhiker%27s+Guide+to+the+Galaxy",
-        coverUrl: cover("The Hitchhiker's Guide to the Galaxy"),
+        coverUrl: "/covers/the-hitchhiker-s-guide.jpg",
       },
       {
         title: "Norwegian Wood",
@@ -462,7 +503,7 @@ export const readingShelves: ReadShelf[] = [
         description:
           "A nostalgic story about love, loss, and memory in 1960s Tokyo.",
         amazonUrl: "https://www.amazon.com/s?k=Norwegian+Wood+Murakami",
-        coverUrl: cover("Norwegian Wood Haruki Murakami"),
+        coverUrl: "/covers/norwegian-wood.jpg",
       },
       {
         title: "Yield",
@@ -471,7 +512,7 @@ export const readingShelves: ReadShelf[] = [
         description:
           "Insights from advertising technology and the digital media ecosystem.",
         amazonUrl: "https://www.amazon.com/s?k=Yield+Ari+Paparo",
-        coverUrl: cover("Yield Ari Paparo"),
+        coverUrl: "/covers/yield.jpg",
       },
       {
         title: "The Thinking Game",
@@ -480,7 +521,7 @@ export const readingShelves: ReadShelf[] = [
         description:
           "An exploration of how we think, reason, and make decisions.",
         amazonUrl: "https://www.amazon.com/s?k=The+Thinking+Game+Steven+Witt",
-        coverUrl: cover("The Thinking Game Steven Witt"),
+        coverUrl: "/covers/the-thinking-game.jpg",
       },
       {
         title: "How Countries Go Broke",
@@ -489,7 +530,7 @@ export const readingShelves: ReadShelf[] = [
         description:
           "An analysis of economic cycles, debt crises, and national financial collapse.",
         amazonUrl: "https://www.amazon.com/s?k=How+Countries+Go+Broke+Ray+Dalio",
-        coverUrl: cover("How Countries Go Broke Ray Dalio"),
+        coverUrl: "/covers/how-countries-go-broke.jpg",
       },
     ],
   },

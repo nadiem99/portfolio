@@ -9,7 +9,7 @@ export default function Home() {
         <p className="max-w-3xl font-mono text-[14px] leading-[1.8] md:text-[15px]">
           I am an AI-native generalist building innovative solutions to challenging problems
           at the intersection of business and technology. Previously scaled an enterprise
-          genAI platform to 7K+ consultants globally. Top 1% Fantasy Premier League.
+          genAI platform to 7K+ employees globally. Top 1% Fantasy Premier League.
         </p>
       </div>
 

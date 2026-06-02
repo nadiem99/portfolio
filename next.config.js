@@ -7,10 +7,6 @@ const nextConfig = {
         protocol: "https",
         hostname: "covers.openlibrary.org",
       },
-      {
-        protocol: "https",
-        hostname: "logo.clearbit.com",
-      },
     ],
   },
 }
