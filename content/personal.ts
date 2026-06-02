@@ -1,13 +1,12 @@
 // Data for the Personal page (/personal).
-// NOTE: Country lists, gallery photos, and the Spotify playlist below are
-// PLACEHOLDERS seeded for layout. Replace with Nadiem's real values.
+// NOTE: gallery photos are still PLACEHOLDERS — replace with real Shot by Nad
+// photos. Country lists and Spotify playlist are Nadiem's real values.
 
 export const personal = {
   instagram: "https://www.instagram.com/shot.by.nad/",
   instagramHandle: "@shot.by.nad",
-  // TODO: replace with Nadiem's "current rotation" playlist id
-  // (from a Spotify playlist URL: open.spotify.com/playlist/<THIS_ID>)
-  spotifyPlaylistId: "37i9dQZF1DXcBWIGoYBM5M",
+  // "Current rotation" playlist.
+  spotifyPlaylistId: "4FtLqnDZgT5TNk7UTG4sot",
 };
 
 // Country names MUST match the world-atlas topojson names
@@ -22,24 +21,47 @@ export const countriesHome: string[] = [
   "Ethiopia",
 ];
 
-// TODO: replace with Nadiem's real travel history.
+// Visited (home countries above take visual priority). Note: Singapore and
+// Bahrain are also visited but omitted here because they are too small to
+// render as polygons on the 110m map.
 export const countriesVisited: string[] = [
-  "United Kingdom",
-  "France",
-  "Spain",
-  "Italy",
+  // Asia
+  "Japan",
+  "South Korea",
+  "Indonesia",
+  "Thailand",
+  // Middle East
+  "Qatar",
   "United Arab Emirates",
+  "Oman",
+  "Yemen",
+  "Kuwait",
+  "Syria",
+  "Jordan",
   "Turkey",
+  // Africa
+  "Egypt",
+  "Morocco",
+  // Europe
+  "Spain",
+  "France",
+  "Italy",
+  "Switzerland",
+  "United Kingdom",
+  // Americas
   "Mexico",
+  "Cuba",
+  "Panama",
 ];
 
-// TODO: replace with Nadiem's real wishlist.
 export const countriesWishlist: string[] = [
-  "Japan",
-  "Morocco",
   "Brazil",
+  "Kenya",
+  "Tanzania",
   "South Africa",
-  "Indonesia",
+  "Kyrgyzstan",
+  "Vietnam",
+  "China",
 ];
 
 export type GalleryPhoto = { src: string; alt: string };
