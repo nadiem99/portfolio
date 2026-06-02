@@ -1,11 +1,47 @@
 "use client";
 
 import Image from "next/image";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { gallery, personal } from "@/content/personal";
 
 export default function PhotoCarousel() {
   const trackRef = useRef<HTMLDivElement>(null);
+
+  // Scroll-linked auto-scroll: as the carousel passes through the viewport
+  // vertically, drive its horizontal scroll position. Cheap (rAF + passive),
+  // and disabled for reduced-motion users (who keep manual control).
+  useEffect(() => {
+    const track = trackRef.current;
+    if (!track) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    let raf = 0;
+    const update = () => {
+      raf = 0;
+      const max = track.scrollWidth - track.clientWidth;
+      if (max <= 0) return;
+      const rect = track.getBoundingClientRect();
+      const vh = window.innerHeight || document.documentElement.clientHeight;
+      // 0 as the strip enters from the bottom, 1 as it exits the top.
+      const raw = (vh - rect.top) / (vh + rect.height);
+      // Remap so the pan happens across the middle of the pass, finishing a
+      // little before it leaves the screen.
+      const p = Math.min(1, Math.max(0, (raw - 0.15) / 0.7));
+      track.scrollLeft = p * max;
+    };
+    const onScroll = () => {
+      if (!raf) raf = requestAnimationFrame(update);
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    update();
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+      if (raf) cancelAnimationFrame(raf);
+    };
+  }, []);
 
   const scrollByCards = (dir: 1 | -1) => {
     const el = trackRef.current;
@@ -35,7 +71,7 @@ export default function PhotoCarousel() {
 
       <div
         ref={trackRef}
-        className="flex snap-x snap-mandatory gap-4 overflow-x-auto pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+        className="flex gap-4 overflow-x-auto pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
       >
         {gallery.map((photo, i) => (
           <a
@@ -43,7 +79,7 @@ export default function PhotoCarousel() {
             href={personal.instagram}
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative aspect-[3/2] w-[82%] flex-none snap-center overflow-hidden border border-foreground/10 bg-foreground/5 sm:w-[56%] md:w-[42%] lg:w-[33%]"
+            className="group relative aspect-[3/2] w-[82%] flex-none overflow-hidden border border-foreground/10 bg-foreground/5 sm:w-[56%] md:w-[42%] lg:w-[33%]"
             aria-label={`${photo.alt} — open Instagram`}
           >
             <Image

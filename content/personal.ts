@@ -97,3 +97,30 @@ export const teams: Team[] = [
     note: "Rip City — yes, really",
   },
 ];
+
+export type Scripture = { arabic: string; english: string; source: string };
+
+export const quranVerses: Scripture[] = [
+  {
+    arabic:
+      "إِنَّ فِى خَلْقِ ٱلسَّمَٰوَٰتِ وَٱلْأَرْضِ وَٱخْتِلَٰفِ ٱلَّيْلِ وَٱلنَّهَارِ لَءَايَٰتٍۢ لِّأُو۟لِى ٱلْأَلْبَٰبِ",
+    english:
+      "Indeed, in the creation of the heavens and the earth and the alternation of the night and the day are signs for those of understanding.",
+    source: "Qur'an 3:190 — Āl ʿImrān",
+  },
+  {
+    arabic: "لَا يُكَلِّفُ ٱللَّهُ نَفْسًا إِلَّا وُسْعَهَا",
+    english: "Allah does not charge a soul except [with that within] its capacity.",
+    source: "Qur'an 2:286 — al-Baqarah",
+  },
+];
+
+export const hadith: Scripture[] = [
+  {
+    arabic:
+      "مَنْ أَصْبَحَ مِنْكُمْ مُعَافًى فِي جَسَدِهِ آمِنًا فِي سِرْبِهِ عِنْدَهُ قُوتُ يَوْمِهِ فَكَأَنَّمَا حِيزَتْ لَهُ الدُّنْيَا",
+    english:
+      "Whoever among you wakes up physically healthy, feeling safe and secure within himself, with food for the day, it is as if he acquired the whole world.",
+    source: "Prophet Muhammad ﷺ — Sunan al-Tirmidhī",
+  },
+];
