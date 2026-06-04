@@ -56,14 +56,9 @@ export default function PersonalPage() {
       {/* Hero */}
       <header className="mb-20 md:mb-28">
         <h1 className="max-w-4xl font-serif text-[34px] leading-[1.1] md:text-[58px] md:leading-[1.05]">
-          Born in Calgary, raised in Saudi Arabia, Harari by blood — and still
-          moving.
+          Meet the person behind the resume. This is my story, my interests, and
+          my hobbies.
         </h1>
-        <p className="mt-7 max-w-2xl font-serif text-lg leading-relaxed text-foreground/80 md:text-2xl">
-          The professional version of me lives on the other tabs. This one is
-          everything else — the places, pictures, teams, songs, and faith that
-          actually shape how I see the world.
-        </p>
       </header>
 
       {/* Origins */}
@@ -75,11 +70,10 @@ export default function PersonalPage() {
             from?&rdquo;
           </h2>
           <p className="mb-10 max-w-2xl font-serif text-lg leading-relaxed text-foreground/80 md:text-xl">
-            I was born in Calgary. My family is Harari — a small ethnic group from
+            I was born in Calgary. My family is Harari, a small ethnic group from
             the old walled city of Harar in eastern Ethiopia. I grew up in Saudi
-            Arabia, moved back to Canada, and now I&apos;m in New York. Four
-            countries before I was old enough to have an accent that matched any
-            of them.
+            Arabia before moving to Montreal for undergrad, and I now live in New
+            York.
           </p>
           <WorldMap />
         </section>
@@ -90,12 +84,12 @@ export default function PersonalPage() {
         <section className="mb-20 md:mb-28">
           <Eyebrow>Travel &amp; Photography</Eyebrow>
           <h2 className="mb-6 max-w-3xl font-serif text-2xl leading-snug md:text-4xl">
-            I travel to collect angles, not stamps.
+            I&apos;ve been blessed with the ability to travel.
           </h2>
           <p className="mb-10 max-w-2xl font-serif text-lg leading-relaxed text-foreground/80 md:text-xl">
-            Somewhere along the way I started carrying a camera everywhere. I shoot
-            the in-between moments — light, streets, people, the texture of a
-            place — and post the ones I love at {personal.instagramHandle}.
+            Somewhere along the way I started carrying a camera everywhere. I
+            love to capture the beauty around me, and I post my favourite photos
+            at {personal.instagramHandle}.
           </p>
           <PhotoCarousel />
         </section>
@@ -158,12 +152,11 @@ export default function PersonalPage() {
         <section className="mb-20 md:mb-24">
           <Eyebrow>Faith</Eyebrow>
           <h2 className="mb-6 max-w-3xl font-serif text-2xl leading-snug md:text-4xl">
-            I&apos;m Muslim, and it&apos;s the quiet center of all of this.
+            My faith is the quiet center of all of this.
           </h2>
           <p className="mb-12 max-w-2xl font-serif text-lg leading-relaxed text-foreground/80 md:text-xl">
             My faith shapes how I think about time, work, risk, and what actually
-            counts as success. It&apos;s what steadies me when optimization stops
-            being enough — and the lens behind a lot of what I write. A few lines
+            counts as success. It&apos;s what keeps me steady and is the lens behind a lot of what I do and write. A few lines
             I keep coming back to:
           </p>
 
